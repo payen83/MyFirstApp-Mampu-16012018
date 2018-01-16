@@ -1,14 +1,38 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      My First App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <p>Welcome to your first application!</p>
+
+  <p>{{staff.name}}</p>
+  <p>{{staff.organization}}</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>  
+  </ion-list>
+  <button ion-button color="secondary" round (click)="showAlert()">Click Me</button>
+
+  <p>Area Calculator</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Panjang</ion-label>
+      <ion-input type="text" [(ngModel)]="panjang"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Lebar</ion-label>
+      <ion-input type="text" [(ngModel)]="lebar"></ion-input>
+    </ion-item>
+  </ion-list>
+  <p>Jawapan: {{luas}}</p>
+  <button ion-button (click)="kiraLuas()">Kira Luas</button>
+  <button ion-button full (click)="pageProfile()">Go To Profile</button>
+
+
 </ion-content>
